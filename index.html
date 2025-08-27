@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroFlow AI – AI-Powered Mental Wellness</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-0+HSS5GCqZxzMjQFp2CIDJaJREFtaNolnLCUuwVHVHuCYDwsfRBXNaUu+OqLbxz1ahT1SUTjmRF7vuP5Q/HFsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Toggle Switch for Dark/Light mode -->
+    <header class="navbar">
+        <div class="logo">NeuroFlow<span>AI</span></div>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#workflow">How It Works</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="toggle-switch">
+            <input type="checkbox" id="theme-toggle" />
+            <label for="theme-toggle"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></label>
+        </div>
+    </header>
+
+    <!-- Floating Particles Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>AI-Powered Mental Wellness<br/>Anytime, Anywhere</h1>
+            <div class="cta-buttons">
+                <a class="btn primary" href="#features">Get Started</a>
+                <a class="btn secondary" href="#">Talk to AI</a>
+                <a class="btn danger" href="#">Emergency Help</a>
+            </div>
+        </div>
+        <div class="hero-3d">
+            <div class="cube">
+                <div class="face front"></div>
+                <div class="face back"></div>
+                <div class="face right"></div>
+                <div class="face left"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section id="features" class="features section">
+        <h2>Core Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fa-solid fa-comments"></i>
+                <h3>24/7 AI Chatbot</h3>
+                <p>Instant CBT-based conversational support.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h3>Crisis Control & SOS</h3>
+                <p>Immediate assistance when you need it most.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-user-check"></i>
+                <h3>Personalized Therapy</h3>
+                <p>Tailored plans based on your unique needs.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Mood & Sleep Tracking</h3>
+                <p>Track progress and patterns effortlessly.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-handshake"></i>
+                <h3>Human + AI Support</h3>
+                <p>The perfect blend of technology and empathy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section id="workflow" class="workflow section">
+        <h2>How It Works</h2>
+        <div class="workflow-timeline">
+            <div class="step">User</div>
+            <div class="step">Frontend</div>
+            <div class="step">AI Engine</div>
+            <div class="step">Database</div>
+            <div class="step">Support System</div>
+        </div>
+    </section>
+
+    <!-- Impact & Benefits -->
+    <section id="benefits" class="benefits section">
+        <h2>Impact & Benefits</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Cost-efficient</h3>
+            </div>
+            <div class="benefit-card">
+                <h3>Accessible</h3>
+            </div>
+            <div class="benefit-card">
+                <h3>Anonymous</h3>
+            </div>
+            <div class="benefit-card">
+                <h3>Time-saving</h3>
+            </div>
+            <div class="benefit-card">
+                <h3>Scalable</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section -->
+    <section id="usp" class="usp section">
+        <h2><span>Why</span> NeuroFlow AI?</h2>
+        <div class="comparison-table">
+            <div class="table-row table-header">
+                <div>Feature</div><div>NeuroFlow AI</div><div>Traditional Therapy</div>
+            </div>
+            <div class="table-row">
+                <div>Availability</div><div>24/7</div><div>Business Hours</div>
+            </div>
+            <div class="table-row">
+                <div>Cost</div><div>Low</div><div>High</div>
+            </div>
+            <div class="table-row">
+                <div>Accessibility</div><div>Global</div><div>Local</div>
+            </div>
+            <div class="table-row">
+                <div>Scalability</div><div>High</div><div>Limited</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+        <h2>Meet the Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John" />
+                <h3>John Doe</h3>
+                <p>CEO & Co-Founder</p>
+            </div>
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane" />
+                <h3>Jane Smith</h3>
+                <p>CTO & Co-Founder</p>
+            </div>
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Alan" />
+                <h3>Alan Johnson</h3>
+                <p>Lead AI Engineer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn submit">Send Message</button>
+        </form>
+        <div class="contact-links">
+            <a href="mailto:hello@neuroflow.ai"><i class="fa-solid fa-envelope"></i>Email</a>
+            <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+            <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+        </div>
+        <p class="closing-tagline">Together, let’s make mental health accessible for all.</p>
+    </section>
+
+    <footer class="footer">© 2025 NeuroFlow AI. All rights reserved.</footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

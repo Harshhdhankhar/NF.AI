@@ -1,0 +1,326 @@
+/* Base Styles */
+:root {
+  --bg-color: #0d0d0d;
+  --text-color: #ffffff;
+  --accent: #4af6cd;
+  --accent-secondary: #ff6cfb;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --glass: rgba(255, 255, 255, 0.1);
+}
+.light {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --card-bg: rgba(0, 0, 0, 0.05);
+  --glass: rgba(0, 0, 0, 0.08);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  transition: background 0.5s, color 0.5s;
+}
+section {
+  padding: 80px 10%;
+}
+h1, h2, h3 {
+  font-weight: 600;
+}
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
+}
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.navbar a:hover::after {
+  width: 100%;
+}
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+}
+#theme-toggle {
+  display: none;
+}
+.toggle-switch label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+  color: var(--text-color);
+}
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+}
+.btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.primary {
+  background: var(--accent);
+  color: #000;
+}
+.secondary {
+  background: var(--accent-secondary);
+}
+.danger {
+  background: #ff4d5a;
+}
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+/* 3D Cube */
+.hero-3d {
+  perspective: 1000px;
+}
+.cube {
+  position: relative;
+  width: 200px;
+  transform-style: preserve-3d;
+  animation: rotateCube 10s infinite linear;
+}
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: var(--accent-secondary);
+  opacity: 0.8;
+  border: 2px solid var(--accent);
+}
+.face.front { transform: translateZ(100px); }
+.face.back { transform: rotateY(180deg) translateZ(100px); }
+.face.right { transform: rotateY(90deg) translateZ(100px); }
+.face.left { transform: rotateY(-90deg) translateZ(100px); }
+.face.top { transform: rotateX(90deg) translateZ(100px); }
+.face.bottom { transform: rotateX(-90deg) translateZ(100px); }
+@keyframes rotateCube {
+  0% { transform: rotate3d(1, 1, 0, 0deg); }
+  100% { transform: rotate3d(1, 1, 0, 360deg); }
+}
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+.feature-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  text-align: center;
+  transition: transform 0.5s;
+}
+.feature-card:hover {
+  transform: translateY(-10px) rotateX(10deg);
+}
+.feature-card i {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+/* Workflow */
+.workflow-timeline {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.step {
+  flex: 1 1 120px;
+  background: var(--glass);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.5s;
+}
+.step:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+.step::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: var(--accent);
+  bottom: -10px;
+  left: 0;
+}
+/* Benefits */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+}
+.benefit-card {
+  background: var(--card-bg);
+  padding: 40px 20px;
+  border-radius: 20px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+.benefit-card:hover {
+  transform: rotateY(180deg);
+}
+/* USP Comparison */
+.comparison-table {
+  max-width: 800px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.table-row {
+  display: contents;
+}
+.table-row div {
+  padding: 15px;
+  border: 1px solid var(--glass);
+  text-align: center;
+}
+.table-header div {
+  font-weight: 700;
+  background: var(--glass);
+}
+/* Team */
+.team-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.team-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+.team-card img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+/* Contact */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+#contact-form input,
+#contact-form textarea {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  background: var(--glass);
+  color: var(--text-color);
+  resize: none;
+}
+.submit {
+  background: var(--accent);
+  color: #000;
+}
+.contact-links {
+  margin-top: 30px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+.contact-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.closing-tagline {
+  text-align: center;
+  margin-top: 30px;
+}
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--glass);
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-3d { margin-top: 40px; }
+  nav ul { display: none; }
+}
+/* Particle Canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
