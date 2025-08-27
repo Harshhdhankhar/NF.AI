@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroFlow AI - AI-Powered Mental Wellness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body class="light-mode">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🧠</span>
+                <span class="logo-text">NeuroFlow AI</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#benefits" class="nav-link">Benefits</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="toggle-icon">🌙</span>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="particles" id="particles"></div>
+        <div class="spotlight-effect"></div>
+        <div class="floating-cubes">
+            <div class="cube cube-1"></div>
+            <div class="cube cube-2"></div>
+            <div class="cube cube-3"></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="highlight-text">AI-Powered</span>
+                        <br>Mental Wellness
+                        <br><span class="subtitle">Anytime, Anywhere</span>
+                    </h1>
+                    <p class="hero-description">
+                        Revolutionary mental health support combining AI technology with human empathy 
+                        to provide accessible, personalized, and effective mental wellness solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-3d" id="getStartedBtn">
+                            <span>Get Started</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                        <button class="btn btn-secondary btn-3d" id="talkToAiBtn">
+                            <span>Talk to AI</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                        <button class="btn btn-emergency btn-3d" id="emergencyBtn">
+                            <span>Emergency Help</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="neuron-network" id="neuronNetwork">
+                        <div class="neuron-node" data-index="0"></div>
+                        <div class="neuron-node" data-index="1"></div>
+                        <div class="neuron-node" data-index="2"></div>
+                        <div class="neuron-node" data-index="3"></div>
+                        <div class="neuron-node" data-index="4"></div>
+                        <div class="neuron-node" data-index="5"></div>
+                        <svg class="neuron-connections">
+                            <line class="connection" x1="0" y1="0" x2="0" y2="0"></line>
+                            <line class="connection" x1="0" y1="0" x2="0" y2="0"></line>
+                            <line class="connection" x1="0" y1="0" x2="0" y2="0"></line>
+                            <line class="connection" x1="0" y1="0" x2="0" y2="0"></line>
+                            <line class="connection" x1="0" y1="0" x2="0" y2="0"></line>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Core Features</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">🤖</div>
+                    <h3>24/7 AI Chatbot</h3>
+                    <p>Instant CBT-based support with intelligent conversation flows and personalized responses.</p>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">🚨</div>
+                    <h3>Crisis Control & SOS</h3>
+                    <p>Immediate crisis intervention with emergency contact routing and real-time support.</p>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">📋</div>
+                    <h3>Personalized Therapy Plans</h3>
+                    <p>AI-driven therapy recommendations tailored to individual needs and progress tracking.</p>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">📊</div>
+                    <h3>Mood & Sleep Tracking</h3>
+                    <p>Advanced analytics for mood patterns, sleep quality, and wellness trend analysis.</p>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">👥</div>
+                    <h3>Human + AI Hybrid Support</h3>
+                    <p>Seamless integration of AI efficiency with human therapist expertise when needed.</p>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="workflow">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="workflow-container">
+                <div class="workflow-step" data-step="1">
+                    <div class="step-icon">👤</div>
+                    <h3>User Interaction</h3>
+                    <p>Secure, anonymous access through our intuitive interface</p>
+                </div>
+                <div class="workflow-arrow">
+                    <div class="arrow-line"></div>
+                    <div class="arrow-head"></div>
+                </div>
+                <div class="workflow-step" data-step="2">
+                    <div class="step-icon">💻</div>
+                    <h3>Frontend Processing</h3>
+                    <p>Real-time data processing with advanced security protocols</p>
+                </div>
+                <div class="workflow-arrow">
+                    <div class="arrow-line"></div>
+                    <div class="arrow-head"></div>
+                </div>
+                <div class="workflow-step" data-step="3">
+                    <div class="step-icon">🧠</div>
+                    <h3>AI Engine Analysis</h3>
+                    <p>Machine learning algorithms analyze and generate personalized responses</p>
+                </div>
+                <div class="workflow-arrow">
+                    <div class="arrow-line"></div>
+                    <div class="arrow-head"></div>
+                </div>
+                <div class="workflow-step" data-step="4">
+                    <div class="step-icon">🗄️</div>
+                    <h3>Database Storage</h3>
+                    <p>Encrypted data storage with privacy-first architecture</p>
+                </div>
+                <div class="workflow-arrow">
+                    <div class="arrow-line"></div>
+                    <div class="arrow-head"></div>
+                </div>
+                <div class="workflow-step" data-step="5">
+                    <div class="step-icon">🤝</div>
+                    <h3>Support Delivery</h3>
+                    <p>Comprehensive support through AI and human therapist collaboration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact & Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2 class="section-title">Impact & Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="benefit-icon">💰</div>
+                            <h3>Cost-Efficient</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Reduce therapy costs by up to 70% while maintaining quality support through AI optimization.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefit-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="benefit-icon">🌍</div>
+                            <h3>Accessible</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Available 24/7 from anywhere in the world, breaking down geographical and time barriers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefit-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="benefit-icon">🔒</div>
+                            <h3>Anonymous</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Complete privacy protection with anonymous sessions and encrypted communications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefit-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="benefit-icon">⚡</div>
+                            <h3>Time-Saving</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Instant support without waiting lists or scheduling conflicts. Get help when you need it.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefit-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="benefit-icon">📈</div>
+                            <h3>Scalable</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Support millions of users simultaneously while maintaining personalized care quality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section -->
+    <section id="usp" class="usp">
+        <div class="container">
+            <h2 class="section-title">Why NeuroFlow AI?</h2>
+            <div class="comparison-container">
+                <div class="comparison-slider" id="comparisonSlider">
+                    <div class="comparison-side traditional">
+                        <h3>Traditional Therapy</h3>
+                        <ul>
+                            <li>❌ Limited availability</li>
+                            <li>❌ High costs</li>
+                            <li>❌ Long waiting lists</li>
+                            <li>❌ Location dependent</li>
+                            <li>❌ Scheduling conflicts</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-divider">
+                        <div class="divider-handle"></div>
+                    </div>
+                    <div class="comparison-side neuroflow">
+                        <h3>NeuroFlow AI</h3>
+                        <ul>
+                            <li>✅ 24/7 availability</li>
+                            <li>✅ Affordable pricing</li>
+                            <li>✅ Instant access</li>
+                            <li>✅ Global accessibility</li>
+                            <li>✅ Flexible support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="usp-highlights">
+                <div class="highlight-item" data-3d>
+                    <span class="highlight-number">10M+</span>
+                    <span class="highlight-text">Users Supported</span>
+                </div>
+                <div class="highlight-item" data-3d>
+                    <span class="highlight-number">95%</span>
+                    <span class="highlight-text">Satisfaction Rate</span>
+                </div>
+                <div class="highlight-item" data-3d>
+                    <span class="highlight-number">24/7</span>
+                    <span class="highlight-text">AI Support</span>
+                </div>
+                <div class="highlight-item" data-3d>
+                    <span class="highlight-number">50+</span>
+                    <span class="highlight-text">Countries</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card" data-hover-lift>
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">👩‍💼</div>
+                    </div>
+                    <h3>Dr. Sarah Chen</h3>
+                    <p class="team-role">Chief Medical Officer</p>
+                    <p class="team-bio">Licensed psychiatrist with 15+ years of experience in digital mental health solutions.</p>
+                    <div class="team-social">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+                <div class="team-card" data-hover-lift>
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">👨‍💻</div>
+                    </div>
+                    <h3>Alex Rodriguez</h3>
+                    <p class="team-role">CTO & AI Lead</p>
+                    <p class="team-bio">Machine learning expert specializing in natural language processing and healthcare AI.</p>
+                    <div class="team-social">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="team-card" data-hover-lift>
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">👩‍🔬</div>
+                    </div>
+                    <h3>Dr. Emily Watson</h3>
+                    <p class="team-role">Head of Research</p>
+                    <p class="team-bio">Clinical psychologist focused on CBT and evidence-based digital interventions.</p>
+                    <div class="team-social">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">ResearchGate</a>
+                    </div>
+                </div>
+                <div class="team-card" data-hover-lift>
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">👨‍🎨</div>
+                    </div>
+                    <h3>Marcus Johnson</h3>
+                    <p class="team-role">UX Design Lead</p>
+                    <p class="team-bio">Human-centered design expert creating intuitive interfaces for mental health platforms.</p>
+                    <div class="team-social">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Dribbble</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>Have questions about NeuroFlow AI? We're here to help you on your mental wellness journey.</p>
+                    <div class="contact-links">
+                        <a href="mailto:hello@neuroflow.ai" class="contact-link">
+                            <span class="contact-icon">📧</span>
+                            hello@neuroflow.ai
+                        </a>
+                        <a href="https://linkedin.com/company/neuroflow-ai" class="contact-link">
+                            <span class="contact-icon">💼</span>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/neuroflow-ai" class="contact-link">
+                            <span class="contact-icon">🐙</span>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-3d">
+                        <span>Send Message</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </form>
+            </div>
+            <div class="closing-message">
+                <h3>Together, let's make mental health accessible for all.</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">🧠</span>
+                    <span class="logo-text">NeuroFlow AI</span>
+                </div>
+                <p>&copy; 2024 NeuroFlow AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
