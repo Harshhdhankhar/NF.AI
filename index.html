@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="NeuroFlow AI - Next-generation AI-powered mental wellness platform" />
+  <title>NeuroFlow AI — AI-Powered Mental Wellness</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background elements -->
+  <canvas id="particlesCanvas" aria-hidden="true"></canvas>
+  <div class="gradient-spotlight" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="#hero" class="brand">
+      <div class="logo-cube" aria-hidden="true">
+        <div class="cube">
+          <span class="face front">N</span>
+          <span class="face back">F</span>
+          <span class="face right">A</span>
+          <span class="face left">I</span>
+          <span class="face top">∑</span>
+          <span class="face bottom">∞</span>
+        </div>
+      </div>
+      <span class="brand-text">NeuroFlow <strong>AI</strong></span>
+    </a>
+
+    <nav class="nav">
+      <button id="themeToggle" class="btn ghost" aria-label="Toggle dark and light theme">🌙</button>
+      <button id="menuToggle" class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="primaryNav" class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#workflow">How It Works</a></li>
+        <li><a href="#benefits">Impact</a></li>
+        <li><a href="#usp">Why Us</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero">
+      <div class="hero-content">
+        <h1 class="title">AI-Powered Mental Wellness <span class="accent">Anytime</span>, <span class="accent">Anywhere</span></h1>
+        <p class="subtitle">NeuroFlow AI blends empathetic conversation, CBT techniques, and proactive insights to support your mental health 24/7.</p>
+        <div class="cta-group">
+          <a class="btn primary glow" href="#features">Get Started</a>
+          <a class="btn secondary" href="#contact">Talk to AI</a>
+          <a class="btn danger pulse" href="#contact">Emergency Help</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="neuron-orbital" aria-hidden="true">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="orbit orbit-c"></div>
+          <div class="core"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features -->
+    <section id="features" class="section features">
+      <h2 class="section-title">Core Features</h2>
+      <div class="features-grid">
+        <article class="feature-card tilt">
+          <div class="icon">💬</div>
+          <h3>24/7 AI Chatbot</h3>
+          <p>Instant CBT-based support with empathetic, evidence-backed responses.</p>
+        </article>
+        <article class="feature-card tilt">
+          <div class="icon">🚨</div>
+          <h3>Crisis Control & SOS</h3>
+          <p>One-tap SOS with localized resources and grounding guidance.</p>
+        </article>
+        <article class="feature-card tilt">
+          <div class="icon">🧩</div>
+          <h3>Personalized Therapy Plans</h3>
+          <p>Adaptive, goal-driven plans tailored to your patterns and needs.</p>
+        </article>
+        <article class="feature-card tilt">
+          <div class="icon">🌙</div>
+          <h3>Mood & Sleep Tracking</h3>
+          <p>Lightweight logging with smart insights and gentle nudges.</p>
+        </article>
+        <article class="feature-card tilt">
+          <div class="icon">🤝</div>
+          <h3>Human + AI Hybrid</h3>
+          <p>Escalate to human experts with AI summaries when needed.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="workflow" class="section workflow">
+      <h2 class="section-title">How It Works</h2>
+      <div class="flow-3d">
+        <div class="flow-step">User</div>
+        <div class="flow-connector"></div>
+        <div class="flow-step">Frontend</div>
+        <div class="flow-connector"></div>
+        <div class="flow-step">AI Engine</div>
+        <div class="flow-connector"></div>
+        <div class="flow-step">Database</div>
+        <div class="flow-connector"></div>
+        <div class="flow-step">Support System</div>
+      </div>
+    </section>
+
+    <!-- Impact & Benefits -->
+    <section id="benefits" class="section benefits">
+      <h2 class="section-title">Impact & Benefits</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card flip">
+          <div class="card-face front">Cost-efficient</div>
+          <div class="card-face back">Reduce barriers with affordable, scalable support.</div>
+        </div>
+        <div class="benefit-card flip">
+          <div class="card-face front">Accessible</div>
+          <div class="card-face back">Available on any device, wherever you are.</div>
+        </div>
+        <div class="benefit-card flip">
+          <div class="card-face front">Anonymous</div>
+          <div class="card-face back">Private by design. You control your data.</div>
+        </div>
+        <div class="benefit-card flip">
+          <div class="card-face front">Time-saving</div>
+          <div class="card-face back">Quick check-ins and actionable insights.</div>
+        </div>
+        <div class="benefit-card flip">
+          <div class="card-face front">Scalable</div>
+          <div class="card-face back">Human + AI to support millions.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USP -->
+    <section id="usp" class="section usp">
+      <h2 class="section-title">Why NeuroFlow AI?</h2>
+      <div class="usp-highlights">
+        <span class="highlight-3d">Futuristic</span>
+        <span class="highlight-3d">Empathetic</span>
+        <span class="highlight-3d">Secure</span>
+        <span class="highlight-3d">Reliable</span>
+      </div>
+      <div class="comparison">
+        <div class="compare-track">
+          <div class="compare-panel ai">
+            <h3>NeuroFlow AI</h3>
+            <ul>
+              <li>24/7 availability</li>
+              <li>Data-driven insights</li>
+              <li>Instant triage</li>
+              <li>Personalized journeys</li>
+            </ul>
+          </div>
+          <div class="compare-panel traditional">
+            <h3>Traditional Therapy</h3>
+            <ul>
+              <li>Limited hours</li>
+              <li>Manual tracking</li>
+              <li>Wait times</li>
+              <li>Fixed schedules</li>
+            </ul>
+          </div>
+          <div class="slider-handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="section team">
+      <h2 class="section-title">Meet the Team</h2>
+      <div class="team-grid">
+        <article class="person-card lift">
+          <div class="avatar" aria-hidden="true">AR</div>
+          <h3>Aria Reynolds</h3>
+          <p>CEO & Founder</p>
+        </article>
+        <article class="person-card lift">
+          <div class="avatar" aria-hidden="true">DK</div>
+          <h3>Dr. Kai D.</h3>
+          <p>Clinical Lead</p>
+        </article>
+        <article class="person-card lift">
+          <div class="avatar" aria-hidden="true">JS</div>
+          <h3>Jordan S.</h3>
+          <p>Head of AI</p>
+        </article>
+        <article class="person-card lift">
+          <div class="avatar" aria-hidden="true">LM</div>
+          <h3>Luna M.</h3>
+          <p>Design Lead</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <h2 class="section-title">Contact & QnA</h2>
+      <div class="contact-wrap">
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="How can we help?" required></textarea>
+          </div>
+          <button class="btn primary glow" type="submit">Send Message</button>
+        </form>
+        <aside class="contact-info">
+          <ul>
+            <li><a href="mailto:hello@neuroflow.ai">Email</a></li>
+            <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noreferrer noopener">GitHub</a></li>
+          </ul>
+          <p class="closing">“Together, let’s make mental health accessible for all.”</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> NeuroFlow AI. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>
+
