@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>NeuroFlow AI — Next‑Gen Mental Health Support</title>
+    <meta name="description" content="NeuroFlow AI: AI-Powered Mental Wellness Anytime, Anywhere. 24/7 chatbot, crisis control, therapy plans, tracking, and hybrid support." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Background particles canvas -->
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <!-- Global app wrapper -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="#hero" class="logo" aria-label="NeuroFlow AI Home">
+          <span class="logo-mark">NF</span>
+          <span class="logo-text">NeuroFlow <strong>AI</strong></span>
+        </a>
+
+        <button id="mobileMenuToggle" class="icon-btn only-mobile" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">
+          <span class="icon-burger" aria-hidden="true"></span>
+        </button>
+
+        <nav id="siteNav" class="site-nav" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#workflow">How It Works</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#usp">Why Us</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle dark/light mode">
+            <span class="icon-sun" aria-hidden="true"></span>
+            <span class="icon-moon" aria-hidden="true"></span>
+          </button>
+          <button id="openChat" class="btn btn-glow">Talk to AI</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="section hero-section reveal">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1>
+              <span class="accent">AI‑Powered</span> Mental Wellness
+              <span class="nowrap">Anytime, Anywhere</span>
+            </h1>
+            <p class="tagline">
+              Evidence‑informed support with a 24/7 AI companion, crisis tools, and hybrid human care.
+            </p>
+            <div class="hero-ctas">
+              <a href="#features" class="btn btn-primary btn-lg">Get Started</a>
+              <button id="heroChat" class="btn btn-secondary btn-lg">Talk to AI</button>
+              <button id="openSOS" class="btn btn-danger btn-lg">Emergency Help</button>
+            </div>
+          </div>
+
+          <!-- 3D Cube Scene -->
+          <div class="cube-scene" aria-hidden="true">
+            <div class="cube">
+              <div class="cube__face cube__face--front">NF</div>
+              <div class="cube__face cube__face--back">AI</div>
+              <div class="cube__face cube__face--right">24/7</div>
+              <div class="cube__face cube__face--left">Care</div>
+              <div class="cube__face cube__face--top">Calm</div>
+              <div class="cube__face cube__face--bottom">Hope</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Features -->
+      <section id="features" class="section features-section reveal">
+        <div class="container">
+          <h2 class="section-title">Core Features</h2>
+          <div class="features-grid">
+            <article class="feature-card" data-tilt>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 3a9 9 0 0 0-9 9c0 4.07 2.72 7.51 6.44 8.56.47.09.64-.2.64-.45 0-.22-.01-.95-.01-1.73-2.62.57-3.17-1.11-3.17-1.11-.42-1.08-1.02-1.36-1.02-1.36-.84-.57.06-.56.06-.56.92.06 1.41.95 1.41.95.83 1.42 2.18 1.01 2.71.77.08-.61.32-1.01.58-1.24-2.09-.24-4.29-1.05-4.29-4.69 0-1.04.37-1.89.98-2.56-.1-.24-.43-1.22.09-2.54 0 0 .81-.26 2.65.98A9.2 9.2 0 0 1 12 7.07c.82.01 1.64.11 2.41.32 1.83-1.24 2.64-.98 2.64-.98.52 1.32.19 2.3.09 2.54.61.67.98 1.52.98 2.56 0 3.65-2.2 4.44-4.3 4.68.33.28.62.83.62 1.68 0 1.21-.01 2.18-.01 2.48 0 .25.17.55.65.45A9 9 0 0 0 12 3z"/></svg>
+              </div>
+              <h3>24/7 AI Chatbot</h3>
+              <p>Instant, evidence‑informed CBT techniques and supportive check‑ins.</p>
+            </article>
+
+            <article class="feature-card" data-tilt>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4Zm0 2.18L19 6.1v4.9c0 4.69-3.15 9.18-7 10.51-3.85-1.33-7-5.82-7-10.51V6.1l7-2.92ZM11 7h2v6h-2V7Zm0 8h2v2h-2v-2Z"/></svg>
+              </div>
+              <h3>Crisis Control & SOS</h3>
+              <p>Immediate access to resources, local lines, and one‑tap SOS tools.</p>
+            </article>
+
+            <article class="feature-card" data-tilt>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9Zm0 2c1.65 0 3.17.5 4.42 1.35l-9.07 9.07A6.97 6.97 0 0 1 5 12c0-3.86 3.14-7 7-7Zm0 14c-1.65 0-3.17-.5-4.42-1.35l9.07-9.07A6.97 6.97 0 0 1 19 12c0 3.86-3.14 7-7 7Z"/></svg>
+              </div>
+              <h3>Personalized Plans</h3>
+              <p>Tailored pathways and goals that adapt to your progress.</p>
+            </article>
+
+            <article class="feature-card" data-tilt>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M6 2h12v2H6V2ZM4 6h16v2H4V6Zm2 4h12v2H6v-2Zm-2 4h16v2H4v-2Zm2 4h12v2H6v-2Z"/></svg>
+              </div>
+              <h3>Mood & Sleep Tracking</h3>
+              <p>Visualize patterns with smart insights and gentle nudges.</p>
+            </article>
+
+            <article class="feature-card" data-tilt>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M20 8h-8l-2-2H4c-1.1 0-2 .9-2 2v9a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V10a2 2 0 0 0-2-2Zm0 11H5a1 1 0 0 1-1-1V9h5.17l2 2H21v7a1 1 0 0 1-1 1Z"/></svg>
+              </div>
+              <h3>Human + AI Hybrid</h3>
+              <p>Seamless escalation to clinicians and peers when you need it.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section id="workflow" class="section workflow-section reveal">
+        <div class="container">
+          <h2 class="section-title">How It Works</h2>
+          <div class="workflow">
+            <div class="workflow__step" data-tilt>
+              <div class="workflow__node">User</div>
+            </div>
+            <div class="workflow__connector" aria-hidden="true"></div>
+            <div class="workflow__step" data-tilt>
+              <div class="workflow__node">Frontend</div>
+            </div>
+            <div class="workflow__connector" aria-hidden="true"></div>
+            <div class="workflow__step" data-tilt>
+              <div class="workflow__node">AI Engine</div>
+            </div>
+            <div class="workflow__connector" aria-hidden="true"></div>
+            <div class="workflow__step" data-tilt>
+              <div class="workflow__node">Database</div>
+            </div>
+            <div class="workflow__connector" aria-hidden="true"></div>
+            <div class="workflow__step" data-tilt>
+              <div class="workflow__node">Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact & Benefits -->
+      <section id="benefits" class="section benefits-section reveal">
+        <div class="container">
+          <h2 class="section-title">Impact & Benefits</h2>
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-card__inner">
+                <div class="benefit-card__face benefit-card__face--front">Cost‑efficient</div>
+                <div class="benefit-card__face benefit-card__face--back">Reduce barriers with scalable automation and triage.</div>
+              </div>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-card__inner">
+                <div class="benefit-card__face benefit-card__face--front">Accessible</div>
+                <div class="benefit-card__face benefit-card__face--back">Available on any device, any time, anywhere.</div>
+              </div>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-card__inner">
+                <div class="benefit-card__face benefit-card__face--front">Anonymous</div>
+                <div class="benefit-card__face benefit-card__face--back">Your privacy first with secure‑by‑design flows.</div>
+              </div>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-card__inner">
+                <div class="benefit-card__face benefit-card__face--front">Time‑saving</div>
+                <div class="benefit-card__face benefit-card__face--back">Automated check‑ins and journaling save hours.</div>
+              </div>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-card__inner">
+                <div class="benefit-card__face benefit-card__face--front">Scalable</div>
+                <div class="benefit-card__face benefit-card__face--back">Grow support without linear costs.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- USP -->
+      <section id="usp" class="section usp-section reveal">
+        <div class="container">
+          <h2 class="section-title">Why NeuroFlow AI?</h2>
+          <p class="usp-3d">Future of Care</p>
+
+          <div class="comparison">
+            <div class="comparison__labels">
+              <span>Traditional Therapy</span>
+              <span>NeuroFlow AI</span>
+            </div>
+            <div class="comparison__panels">
+              <div class="comparison__panel comparison__panel--base">
+                <ul>
+                  <li>Fixed schedules</li>
+                  <li>High cost per session</li>
+                  <li>Limited availability</li>
+                  <li>Manual tracking</li>
+                </ul>
+              </div>
+              <div id="comparisonOverlay" class="comparison__panel comparison__panel--overlay">
+                <ul>
+                  <li>24/7 on‑demand support</li>
+                  <li>Cost‑efficient at scale</li>
+                  <li>Global access</li>
+                  <li>Automated insights</li>
+                </ul>
+              </div>
+            </div>
+            <div class="comparison__slider">
+              <input id="compareRange" type="range" min="0" max="100" value="60" aria-label="Compare slider" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team / About Us -->
+      <section id="team" class="section team-section reveal">
+        <div class="container">
+          <h2 class="section-title">Team</h2>
+          <div class="team-grid">
+            <article class="team-card" data-tilt>
+              <div class="avatar" data-initials="AL" aria-hidden="true"></div>
+              <h3>Alex Li</h3>
+              <p>Founder & CEO</p>
+              <div class="socials">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+              </div>
+            </article>
+            <article class="team-card" data-tilt>
+              <div class="avatar" data-initials="SR" aria-hidden="true"></div>
+              <h3>Sofia Reyes</h3>
+              <p>Head of Clinical</p>
+              <div class="socials">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+              </div>
+            </article>
+            <article class="team-card" data-tilt>
+              <div class="avatar" data-initials="KM" aria-hidden="true"></div>
+              <h3>Kenji Matsumoto</h3>
+              <p>AI Lead</p>
+              <div class="socials">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+              </div>
+            </article>
+            <article class="team-card" data-tilt>
+              <div class="avatar" data-initials="NP" aria-hidden="true"></div>
+              <h3>Nia Patel</h3>
+              <p>Design Director</p>
+              <div class="socials">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact / QnA -->
+      <section id="contact" class="section contact-section reveal">
+        <div class="container">
+          <h2 class="section-title">Contact & QnA</h2>
+          <div class="contact-grid">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+                <span class="error" id="err-name"></span>
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                <span class="error" id="err-email"></span>
+              </div>
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+                <span class="error" id="err-message"></span>
+              </div>
+              <div class="form-row form-actions">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+              <p class="form-note">We typically reply within 1 business day.</p>
+            </form>
+
+            <aside class="contact-aside">
+              <div class="links">
+                <a href="mailto:hello@neuroflow.ai" class="link">Email</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="link">LinkedIn</a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="link">GitHub</a>
+              </div>
+              <div class="qna">
+                <details>
+                  <summary>Is this a medical service?</summary>
+                  <p>NeuroFlow AI is a support tool and does not replace professional care. In an emergency, use the SOS resources.</p>
+                </details>
+                <details>
+                  <summary>How is my data used?</summary>
+                  <p>Your privacy matters. We use aggregated analytics and safeguards. You control your data export.</p>
+                </details>
+                <details>
+                  <summary>Can I talk to a human?</summary>
+                  <p>Yes. Our hybrid support lets you escalate to clinicians or peers when needed.</p>
+                </details>
+              </div>
+              <p class="closing">Together, let’s make mental health accessible for all.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p>© <span id="year"></span> NeuroFlow AI. All rights reserved.</p>
+        <p class="small">If you are in immediate danger, call your local emergency number. In the US, dial 911 or 988 for the Suicide & Crisis Lifeline.</p>
+      </div>
+    </footer>
+
+    <!-- Chat Modal -->
+    <div id="chatModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="chatTitle" hidden>
+      <div class="modal__dialog">
+        <div class="modal__header">
+          <h3 id="chatTitle">NeuroFlow AI Assistant</h3>
+          <button class="icon-btn modal-close" data-close="chatModal" aria-label="Close chat">✕</button>
+        </div>
+        <div id="chatMessages" class="chat__messages" aria-live="polite"></div>
+        <form id="chatForm" class="chat__form">
+          <input id="chatInput" type="text" placeholder="Type your message..." autocomplete="off" />
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- SOS Modal -->
+    <div id="sosModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="sosTitle" hidden>
+      <div class="modal__dialog">
+        <div class="modal__header">
+          <h3 id="sosTitle">Emergency Help</h3>
+          <button class="icon-btn modal-close" data-close="sosModal" aria-label="Close emergency help">✕</button>
+        </div>
+        <div class="modal__content">
+          <p><strong>If you are in immediate danger:</strong> Call your local emergency number right now.</p>
+          <ul class="sos-list">
+            <li>US: 911 or 988 (Suicide & Crisis Lifeline)</li>
+            <li>UK: 999 or Samaritans 116 123</li>
+            <li>EU: 112</li>
+            <li>AU: 000 or Lifeline 13 11 14</li>
+          </ul>
+          <p>We care about you. You can also use the chat for grounding techniques and coping tools.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+  </html>
+
